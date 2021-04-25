@@ -1,0 +1,17 @@
+.mat-tab-group {
+    margin-bottom: 48px;
+    
+  }
+
+  .example-icon {
+    padding: 0 14px;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  span {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }

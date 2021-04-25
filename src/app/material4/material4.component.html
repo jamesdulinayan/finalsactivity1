@@ -1,0 +1,49 @@
+<section class="center">
+  
+  <div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Amount</mat-label>
+    <input matInput type="number" class="example-right-align">
+    <span matPrefix>$&nbsp;</span>
+    <span matSuffix>.00</span>
+  </mat-form-field>
+</div>
+
+</section>
+
+<section class="center">
+<div class="example-container">
+  <form [formGroup]="options">
+
+    <mat-form-field appearance="fill"
+        [hideRequiredMarker]="hideRequiredControl.value"
+        [floatLabel]="floatLabelControl.value">
+      <input matInput placeholder="Simple placeholder" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+      <mat-label>Both a label and a placeholder</mat-label>
+      <input matInput placeholder="Simple placeholder">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill"
+        [hideRequiredMarker]="hideRequiredControl.value"
+        [floatLabel]="floatLabelControl.value">
+      <mat-select required>
+        <mat-option>-- None --</mat-option>
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+      <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label>
+    </mat-form-field>
+  </form>
+</div>
+
+</section>
